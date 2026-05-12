@@ -345,6 +345,38 @@ a:focus-visible {
     }
 }
 
+.pdf-footer {
+    text-align: center;
+    padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+}
+
+.pdf-btn {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out);
+}
+
+.pdf-btn:hover {
+    background: var(--accent);
+    color: var(--text-on-dark);
+}
+
+.pdf-btn:active {
+    opacity: 0.75;
+}
+
+.pdf-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 @media print {
     body {
         padding: 0;
@@ -425,5 +457,9 @@ a:focus-visible {
 
     .cp-contests li {
         color: #555;
+    }
+
+    .pdf-footer {
+        display: none;
     }
 }
